@@ -1,4 +1,4 @@
-#dictionary
+# dictionary
 colors = {
     "red":"แดง",
     "green":"เขียว",
