@@ -63,7 +63,10 @@ def treeplot(
                     t = t[:position, :]
 
             t = t[:-1, :]
-            parent_idx = t[-1, 0]
+            if t.size > 0:
+                parent_idx = t[-1, 0]
+            else:
+                parent_idx = -2
             if parent_idx != -2:
                 y[parent_idx] = depth
                 x_l[parent_idx] = left_most + 1
