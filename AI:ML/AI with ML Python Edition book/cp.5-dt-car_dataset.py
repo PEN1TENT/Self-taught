@@ -14,7 +14,7 @@ def load(path = './dataset/car.csv', return_attr_names = False, split_train_test
     attr_names = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety']
     
     X = car.iloc[:, :6].values
-    T = car.iloc[:, :-1].values
+    T = car.iloc[:, -1].values
     F = np.array(attr_names)
     if split_train_test:
         classes = np.unique(T)
